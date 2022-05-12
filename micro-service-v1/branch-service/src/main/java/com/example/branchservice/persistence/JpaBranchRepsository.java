@@ -9,6 +9,5 @@ import java.util.Optional;
 public interface JpaBranchRepsository extends JpaRepository<Branch, Long>, BranchRepository {
     List<Branch> findAll();
     Optional<Branch> findById(Long id);
-    Branch save(Branch branch);
     void deleteById(Long id);
 }
