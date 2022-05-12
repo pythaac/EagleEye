@@ -37,6 +37,6 @@ public class BranchCRUDService {
     }
 
     public void removeBranch(Long id){
-        branchRepository.delete(id);
+        branchRepository.deleteById(id);
     }
 }

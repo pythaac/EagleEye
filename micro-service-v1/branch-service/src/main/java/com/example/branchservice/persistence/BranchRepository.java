@@ -8,6 +8,6 @@ import java.util.Optional;
 public interface BranchRepository {
     Collection<Branch> findAll();
     Optional<Branch> findById(Long id);
-    Optional<Branch> save(Branch branch);
-    Long delete(Long id);
+    Branch save(Branch branch);
+    void deleteById(Long id);
 }
