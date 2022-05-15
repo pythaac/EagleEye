@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class NormalController {
-    private final static Long target = 1_000_000_000L;
+    private final static Long target = 5_000_000L;
 
     @GetMapping(value = "/normal")
     public Long normal(){

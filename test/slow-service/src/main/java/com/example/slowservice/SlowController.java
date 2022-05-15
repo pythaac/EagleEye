@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class SlowController {
-    private final static Long target = 10_000_000_000L;
+    private final static Long target = 10_000_000L;
 
     @GetMapping(value = "/slow")
     public Long normal(){
