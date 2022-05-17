@@ -3,23 +3,23 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: fast-service
-  name: fast-service
+    app: normal-service
+  name: normal-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: fast-service
+      app: normal-service
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: fast-service
+        app: normal-service
     spec:
       containers:
-      - image: pythaac/fast-service
-        name: fast-service
+      - image: pythaac/normal-service
+        name: normal-service
         resources: {}
 status: {}
 ---
@@ -28,17 +28,17 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: fast-service
-  name: fast-service
+    app: normal-service
+  name: normal-service
 spec:
   ports:
   - name: 8080-8080
     port: 8080
-    nodePort: 32460
+    nodePort: 32461
     protocol: TCP
     targetPort: 8080
   selector:
-    app: fast-service
+    app: normal-service
   type: NodePort
 status:
   loadBalancer: {}
