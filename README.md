@@ -18,7 +18,7 @@ Kubernetes에서 Spring boot 서비스가 동작중인 환경을 Prometheus-stac
 ## 🌏환경
 <p align="center"><img src="/images/rpi.jpg" width="30%"></img></p>  
 
-### Raspberry pi 4B x 4  
+### 📌Raspberry pi 4B x 4  
 - CPU  
 -- Broadcom BCM2711 Quad core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5GHz
 - Memory  
@@ -28,9 +28,9 @@ Kubernetes에서 Spring boot 서비스가 동작중인 환경을 Prometheus-stac
 - Network  
 -- wlan0 x 2 / eth0 x 2  
 
-### Software  
+### 📌Software  
 - OS  
-Ubuntu 20.04.4 LTS
+-- Ubuntu 20.04.4 LTS
 - kernel  
 -- Linux version 5.4.0-1060-raspi (buildd@bos02-arm64-051)
 - Spring boot  
@@ -50,5 +50,5 @@ Ubuntu 20.04.4 LTS
 - Prometheus-stack  
 -- kube-prometheus-stack : 35.2.0  
 -- kube-state-metrics : 4.7.*  
--- prometheus-node-exporter : 3.1.*
+-- prometheus-node-exporter : 3.1.*  
 -- grafana : 6.29.*
