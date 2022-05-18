@@ -3,24 +3,24 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: fast-service
-  name: fast-service
+    app: slow-service
+  name: slow-service
   namespace: test
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: fast-service
+      app: slow-service
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: fast-service
+        app: slow-service
     spec:
       containers:
-      - image: pythaac/fast-service
-        name: fast-service
+      - image: pythaac/slow-service
+        name: slow-service
         resources: {}
 status: {}
 ---
@@ -29,18 +29,18 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: fast-service
-  name: fast-service
+    app: slow-service
+  name: slow-service
   namespace: test
 spec:
   ports:
   - name: 8080-8080
     port: 8080
-    nodePort: 32460
+    nodePort: 32462
     protocol: TCP
     targetPort: 8080
   selector:
-    app: fast-service
+    app: slow-service
   type: NodePort
 status:
   loadBalancer: {}
@@ -48,15 +48,15 @@ status:
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: monitoring-fast-service
+  name: monitoring-slow-service
   labels:
-    app: fast-service
+    app: slow-service
     release: prometheus
   namespace: prometheus
 spec:
   selector:
     matchLabels:
-      app: fast-service
+      app: slow-service
   endpoints:
     - interval: 15s
       path: '/actuator/prometheus'
