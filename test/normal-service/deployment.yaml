@@ -5,6 +5,7 @@ metadata:
   labels:
     app: normal-service
   name: normal-service
+  namespace: test
 spec:
   replicas: 1
   selector:
@@ -30,6 +31,7 @@ metadata:
   labels:
     app: normal-service
   name: normal-service
+  namespace: test
 spec:
   ports:
   - name: 8080-8080
@@ -42,3 +44,24 @@ spec:
   type: NodePort
 status:
   loadBalancer: {}
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: monitoring-normal-service
+  labels:
+    app: normal-service
+    release: prometheus
+  namespace: prometheus
+spec:
+  selector:
+    matchLabels:
+      app: normal-service
+  endpoints:
+    - interval: 15s
+      path: '/actuator/prometheus'
+      port: 8080-8080
+      scheme: http
+  namespaceSelector:
+    matchNames:
+      - test
