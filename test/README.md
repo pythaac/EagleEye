@@ -54,7 +54,7 @@ guest/guest
 &nbsp;  
 
 ### ⭐CPU Usage  
-- 계산양이 더 많은 slow-service의 cpu usage가 조금 더 높은 것을 확인  
+- 계산양이 더 많은 slow-service의 cpu usage가 max는 약 2배, avg는 약 4배 더 높은 것을   
 &nbsp;  
 
 <div align="center">
