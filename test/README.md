@@ -48,16 +48,12 @@ guest/guest
 &nbsp;  
 
 ### ⭐테스트 에이전트 실행 화면
-<p align="center"><img src="/images/test-agent.PNG" width="50%"></img></p>  
 - print를 통해 응답이 빠른 순서대로 더 많은 요청을 보내는 것을 확인  
+
+<p align="center"><img src="/images/test-agent.PNG" width="50%"></img></p>  
 &nbsp;  
 
 ### ⭐CPU Usage  
-<p align="center"><img src="/images/test-fast-cpu.PNG" width="100%"></img><text>fast-service</text></p>  
-&nbsp;  
-<p align="center"><img src="/images/test-slow-cpu.PNG" width="100%"><text>slow-service</text></img></p>  
-&nbsp;  
-
 - 계산양이 더 많은 slow-service의 cpu usage가 조금 더 높은 것을 확인  
 &nbsp;  
 
@@ -85,12 +81,12 @@ guest/guest
 </div>  
 &nbsp;  
 
-### ⭐Request  
-<p align="center"><img src="/images/test-fast-request.PNG" width="100%"></img><text>fast-service</text></p>  
+<p align="center"><img src="/images/test-fast-cpu.PNG" width="100%"></img><text>fast-service</text></p>  
 &nbsp;  
-<p align="center"><img src="/images/test-slow-request.PNG" width="100%"><text>slow-service</text></img></p>  
+<p align="center"><img src="/images/test-slow-cpu.PNG" width="100%"><text>slow-service</text></img></p>  
 &nbsp;  
 
+### ⭐Request  
 - 요청 처리속도는 fast-service보다 slow-service가 약 8~9배 더 걸리는 것을 확인  
 - 테스트 에이전트는 응답을 받고 요청을 처리하므로, 초당 요청 개수는 fast-service가 약 3배 더 많은 것을 확인  
 &nbsp;  
@@ -116,4 +112,10 @@ guest/guest
       <td>7.60</td>
     </tr>
   </table>
-</div>
+</div>  
+&nbsp;  
+
+<p align="center"><img src="/images/test-fast-request.PNG" width="100%"></img><text>fast-service</text></p>  
+&nbsp;  
+<p align="center"><img src="/images/test-slow-request.PNG" width="100%"><text>slow-service</text></img></p>  
+&nbsp;  
