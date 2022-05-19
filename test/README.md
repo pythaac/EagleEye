@@ -43,7 +43,7 @@ guest/guest
 
 ## 테스트 결과
 ### ⭐목표  
-- 테스트 에이전트를 실행하여 전/후 차이를 Grafana로 확인
+- 테스트 에이전트 실행 전/후 차이를 Grafana로 확인
 - /fast와 /slow의 차이를 Grafana로 확인  
 &nbsp;  
 
