@@ -8,9 +8,10 @@ http://pythaac.gonetis.com:32003/d/spring_boot_21/
 - 계정  
 guest/guest  
 - 인스턴스  
-192.168.189.112:8080 : fast-service  
-192.168.189.113:8080 : normal-service  
-192.168.189.114:8080 : slow-service  
+~~192.168.189.112:8080 : fast-service~~  
+~~192.168.189.113:8080 : normal-service~~  
+~~192.168.189.114:8080 : slow-service~~  
+(라즈베리파이의 전원 및 인터넷 연결 상태의 불안정으로 주소가 다를 수 있습니다)  
 &nbsp;  
 
 ## 테스트 애플리케이션  
