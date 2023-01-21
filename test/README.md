@@ -4,7 +4,7 @@ Spring boot Hello-world controller로 Monitoring
 
 ## Grafana  
 - 주소  
-http://pythaac.gonetis.com:32003/d/spring_boot_21/  
+http://{Domain}:32003/d/spring_boot_21/  
 - 계정  
 guest/guest  
 - 인스턴스  
